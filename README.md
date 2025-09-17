@@ -23,7 +23,7 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 ### Screenshot
 ![Demo Screenshot](backend/rendered_videos/Picture1.jpg)
 
-### Demo GIF
+### GIF
 [Demo GIF](backend/rendered_videos/Demogif.gif)
 
 ### Live verzija
