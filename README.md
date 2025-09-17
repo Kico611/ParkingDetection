@@ -21,7 +21,7 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 ## 🖼️ Demo
 
 ### Screenshot
-![Demo Screenshot](path/to/your/screenshot.png)
+![Demo Screenshot](frontend/demo_screenshot.png)
 
 ### Video
 [Demo Video](path/to/your/video.mp4)
@@ -33,6 +33,7 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 
 ## 📂 Struktura projekta
 
+```
 ParkingDetection/
 ├── backend/
 │ ├── model/ # Trening.py i model.pkl
@@ -41,6 +42,7 @@ ParkingDetection/
 ├── venv/ # Virtualno okruženje (nije obavezno za GitHub)
 ├── .gitignore
 └── README.md # Dokumentacija
+```
 
 ---
 
@@ -75,6 +77,7 @@ Način rada: Offline – korisnik šalje MP4 video, sustav ga obradi i generira 
 Latencija: Ovisi o duljini i rezoluciji videa (nije real-time)
 
 Ograničenje: Testirano samo na jednom setu snimki – performanse u različitim uvjetima još nisu evaluirane
+
 ---
 ## 🛠️ Tehnologije
 Python 3.10+
@@ -86,6 +89,7 @@ NumPy
 Flask / FastAPI (backend API)
 
 HTML / CSS / JavaScript (frontend)
+
 ---
 ## 🔮 Moguće nadogradnje
 Testiranje u različitim vremenskim i svjetlosnim uvjetima
@@ -97,6 +101,7 @@ Integracija YOLO / Mask R-CNN modela za automatsko prepoznavanje parking slotova
 Integracija s mobilnom aplikacijom
 
 Deployment na Raspberry Pi + kamera za pametna parking rješenja
+
 ---
 ## 👨‍💻 Autor
 Kristijan Balić
