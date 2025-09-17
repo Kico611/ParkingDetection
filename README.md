@@ -33,7 +33,9 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 
 ## 📂 Struktura projekta
 
-- **backend/model/** – Sadrži sve što je vezano uz strojno učenje: trening skriptu i spremljeni model.  
+- **backend/model/** – Sadrži sve što je vezano uz strojno učenje: trening skriptu i spremljeni model.
+- **backend/detect_parking.py** – Implementacija glavnih funkcija detekcije.
+- - **backend/utils.py** – Pomoćne funkcije za obradu podataka i podršku glavnom algoritmu. 
 - **backend/main.py** – Pokreće cijeli backend sustav, uključujući učitavanje modela, obradu videa/slika i generiranje outputa.  
 - **frontend/** – React-based web aplikacija za prikaz rezultata detekcije, upload videa i vizualizaciju slobodnih/zauzetih mjesta.  
 - **venv/** – Virtualno okruženje s Python paketima, može se preskočiti na GitHubu.  
