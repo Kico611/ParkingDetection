@@ -50,7 +50,7 @@ Kopiraj kod
 
 1. Kloniraj repozitorij:
 
-```bash
+bash
 git clone https://github.com/Kico611/ParkingDetection.git
 cd ParkingDetection
 Instaliraj potrebne pakete:
