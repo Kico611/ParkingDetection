@@ -77,15 +77,15 @@ Ograničenje: Testirano samo na jednom setu snimki – performanse u različitim
 ---
 
 ## 🛠️ Tehnologije
-- **Python 3.10+** – Core programming language
-- 
-- **OpenCV** – Computer vision and image processing
--  
-- **NumPy** – Numerical computations
-- 
-- **FastAPI** – Backend API for handling requests
-- 
-- **React (HTML / CSS / JavaScript)** – Frontend user interface
+- **Python 3.10+**
+  
+- **OpenCV**
+  
+- **NumPy**
+  
+- **FastAPI**
+  
+- **React (HTML / CSS / JavaScript)**
 
 ---
 
