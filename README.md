@@ -86,9 +86,9 @@ OpenCV
 
 NumPy
 
-Flask / FastAPI (backend API)
+FastAPI (backend API)
 
-HTML / CSS / JavaScript (frontend)
+HTML / CSS / JavaScript(React) (frontend)
 
 ---
 ## 🔮 Moguće nadogradnje
