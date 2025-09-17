@@ -1,70 +1,84 @@
-Parking Detection 🚗🅿️
+# Parking Detection 🚗🅿️
 
-Automatski sustav za detekciju zauzetih i slobodnih parking mjesta pomoću računalnog vida.
-Projekt koristi OpenCV i Python za obradu videa te generira izlazni video s označenim slobodnim i zauzetim mjestima.
+Automatski sustav za detekciju zauzetih i slobodnih parking mjesta pomoću računalnog vida.  
+Projekt koristi Python i OpenCV za obradu videa te generira izlazni video s označenim slobodnim i zauzetim mjestima.
 
-🚀 Značajke
+---
 
-✅ Detekcija slobodnih i zauzetih parking mjesta
+## 🚀 Značajke
 
-✅ 100% točnost na dostupnim testnim podacima
+- ✅ Detekcija slobodnih i zauzetih parking mjesta  
+- ✅ Vizualizacija pomoću bounding boxova (🟢 zeleno = slobodno, 🔴 crveno = zauzeto)  
+- ✅ Brojač slobodnih i zauzetih mjesta  
+- ✅ Generiranje renderiranog izlaznog videa koji se može preuzeti  
+- ✅ Modularna arhitektura (backend + frontend)  
+- ✅ 100% točnost na dostupnim testnim podacima  
 
-✅ Vizualizacija pomoću bounding boxova (zeleno = slobodno, crveno = zauzeto)
+---
 
-✅ Brojač slobodnih i zauzetih mjesta
+## 🖼️ Demo
 
-✅ Modularna arhitektura (backend + frontend)
+### Screenshot
+![Demo Screenshot](path/to/your/screenshot.png)  
 
-✅ Generiranje renderiranog izlaznog videa koji se može preuzeti
+### Video
+[Demo Video](path/to/your/video.mp4)  
 
-🖼️ Demo
+### Live verzija
+[Live Site](https://tvoj-live-link.com)
 
+---
 
+## 📂 Struktura projekta
 
-📂 Struktura projekta
 ParkingDetection/
-│── backend/ # Python kod za detekciju i logiku
-│── frontend/ # Web sučelje (vizualizacija, upload videa)
+│── backend/
+│ │── model/ # Trening.py i model.pkl
+│ │── main.py # Glavni Python skript za pokretanje
+│── frontend/ # Web sučelje (upload videa i vizualizacija)
 │── data/ # Testne slike / video
-│── models/ # (opcionalno) modeli za proširenje
 │── README.md # Dokumentacija
 
-⚙️ Instalacija i pokretanje
+yaml
+Kopiraj kod
 
-Kloniraj repozitorij:
+---
 
+## ⚙️ Instalacija i pokretanje
+
+1. Kloniraj repozitorij:
+
+```bash
 git clone https://github.com/Kico611/ParkingDetection.git
 cd ParkingDetection
-
-
 Kreiraj virtualno okruženje i instaliraj ovisnosti:
 
+bash
+Kopiraj kod
 python -m venv venv
-source venv/bin/activate # (Linux/Mac)
-venv\Scripts\activate # (Windows)
+# Linux / Mac
+source venv/bin/activate
+# Windows
+venv\Scripts\activate
+
 pip install -r requirements.txt
-
-
 Pokreni backend:
 
-python main.py
-
-
-Otvori frontend i učitaj video (.mp4).
-Nakon obrade, izlazni video se može preuzeti s označenim mjestima.
+bash
+Kopiraj kod
+python backend/main.py
+Otvori frontend u pregledniku, učitaj video (.mp4) i preuzmi izlazni video s označenim parking mjestima.
 
 📊 Performanse
-
 Točnost: 100% na dostupnim testnim podacima
 
-Način rada: Obrada se radi offline – korisnik šalje MP4 video, sustav ga obradi i generira izlazni video
+Način rada: Offline – korisnik šalje MP4 video, sustav ga obradi i generira izlazni video
 
 Latencija: Ovisi o duljini i rezoluciji videa (nije real-time)
 
-Ograničenje: Testirano samo na snimkama iz jednog seta (isti uvjeti snimanja) – performanse u različitim vremenskim i svjetlosnim uvjetima još nisu evaluirane
+Ograničenje: Testirano samo na jednom setu snimki – performanse u različitim uvjetima još nisu evaluirane
 
 🛠️ Tehnologije
-
 Python 3.10+
 
 OpenCV
@@ -73,22 +87,18 @@ NumPy
 
 Flask / FastAPI (backend API)
 
-HTML/CSS/JS (frontend)
+HTML / CSS / JavaScript (frontend)
 
 🔮 Moguće nadogradnje
+Testiranje u različitim vremenskim i svjetlosnim uvjetima
 
-Testiranje na različitim vremenskim i svjetlosnim uvjetima
+Real-time obrada (kamera → live detekcija)
 
-Implementacija real-time obrade (kamera → live detekcija)
+Integracija YOLO / Mask R-CNN modela za automatsko prepoznavanje parking slotova
 
-Dodavanje YOLO/Mask R-CNN modela za automatsko prepoznavanje parking slotova
-
-Integracija s mobilnom aplikacijom za korisnike
+Integracija s mobilnom aplikacijom
 
 Deployment na Raspberry Pi + kamera za pametna parking rješenja
 
 👨‍💻 Autor
-
 Kristijan Balić
-
-GitHub profil
