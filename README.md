@@ -21,10 +21,10 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 ## 🖼️ Demo
 
 ### Screenshot
-![Demo Screenshot](frontend/demo_screenshot.png)
+![Demo Screenshot](backend/rendered_videos/Picture1.jpg)
 
 ### Video
-[Demo Video](path/to/your/video.mp4)
+[Demo Video](backend/rendered_videos/fb4bdb5c-c0e8-4f65-a485-96b4a1509ac8.mp4)
 
 ### Live verzija
 [Live Site](https://tvoj-live-link.com)
