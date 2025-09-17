@@ -1,48 +1,94 @@
-# ParkingDetection
+Parking Detection 🚗🅿️
 
-**ParkingDetection** je sustav za automatsku detekciju slobodnih i zauzetih parkirnih mjesta koristeći računalni vid i strojno učenje. Projekt omogućuje praćenje parkirališta u stvarnom vremenu i vizualno označavanje statusa mjesta, čime se poboljšava efikasnost upravljanja prostorom i korisničko iskustvo.
+Automatski sustav za detekciju zauzetih i slobodnih parking mjesta pomoću računalnog vida.
+Projekt koristi OpenCV i Python za obradu videa te generira izlazni video s označenim slobodnim i zauzetim mjestima.
 
-## 🎯 Cilj projekta
+🚀 Značajke
 
-Cilj projekta je stvoriti sustav koji:
-- Automatski prepoznaje zauzeta i slobodna parkirna mjesta.
-- Omogućuje vizualni prikaz stanja parkirališta.
-- Može se integrirati u web ili mobilne aplikacije za prikaz informacija korisnicima.
+✅ Detekcija slobodnih i zauzetih parking mjesta
 
-## 🏗️ Arhitektura
+✅ 100% točnost na dostupnim testnim podacima
 
-Projekt je podijeljen na dva glavna dijela:
+✅ Vizualizacija pomoću bounding boxova (zeleno = slobodno, crveno = zauzeto)
 
-### 1. Backend
-- **Detekcija parkirnih mjesta**: koristi OpenCV za obradu slike i identifikaciju bounding boxeva parkirnih mjesta.  
-- **Model strojog učenja**: klasificira svako parkirno mjesto kao slobodno ili zauzeto.  
-- **Obrada videa i slika**: omogućuje analizu pojedinačnih slika ili video feedova i vraćanje vizualnih rezultata.  
-- **Integracija s bazom podataka i cloud storageom**: pohranjuje rezultate i generirane slike/videozapise (Firebase Firestore i Supabase).
+✅ Brojač slobodnih i zauzetih mjesta
 
-### 2. Frontend
-- Prikazuje rezultate detekcije u vizualnom obliku.
-- Može prikazati overlay s brojem slobodnih i zauzetih mjesta.
-- Omogućuje preuzimanje generiranih videozapisa i slika.
+✅ Modularna arhitektura (backend + frontend)
 
-## ⚡ Funkcionalnosti
+✅ Generiranje renderiranog izlaznog videa koji se može preuzeti
 
-- Prepoznavanje slobodnih i zauzetih parkirnih mjesta u stvarnom vremenu.
-- Prikaz bounding boxeva na parkirnim mjestima (zeleno = slobodno, crveno = zauzeto).
-- Ažuriranje broja slobodnih i zauzetih mjesta.
-- Optimizacija performansi za video feedove pomoću provjere samo značajnih promjena.
-- Integracija s cloud servisima za pohranu i dohvat podataka.
+🖼️ Demo
 
-## 💡 Primjena
 
-- Pametna parkirališta u gradovima.
-- Integracija u mobilne aplikacije ili web platforme za vozače.
-- Analiza zauzetosti parkirališta tijekom dana.
-- Automatizacija upravljanja parkirnim prostorom.
 
-## 📊 Tehnologije
+📂 Struktura projekta
+ParkingDetection/
+│── backend/ # Python kod za detekciju i logiku
+│── frontend/ # Web sučelje (vizualizacija, upload videa)
+│── data/ # Testne slike / video
+│── models/ # (opcionalno) modeli za proširenje
+│── README.md # Dokumentacija
 
-- Python (backend logika)
-- OpenCV (računalni vid)
-- NumPy (numeričke operacije)
-- Pickle (učitavanje modela)
-- Firebase / Supabase (cloud pohrana)
+⚙️ Instalacija i pokretanje
+
+Kloniraj repozitorij:
+
+git clone https://github.com/Kico611/ParkingDetection.git
+cd ParkingDetection
+
+
+Kreiraj virtualno okruženje i instaliraj ovisnosti:
+
+python -m venv venv
+source venv/bin/activate # (Linux/Mac)
+venv\Scripts\activate # (Windows)
+pip install -r requirements.txt
+
+
+Pokreni backend:
+
+python main.py
+
+
+Otvori frontend i učitaj video (.mp4).
+Nakon obrade, izlazni video se može preuzeti s označenim mjestima.
+
+📊 Performanse
+
+Točnost: 100% na dostupnim testnim podacima
+
+Način rada: Obrada se radi offline – korisnik šalje MP4 video, sustav ga obradi i generira izlazni video
+
+Latencija: Ovisi o duljini i rezoluciji videa (nije real-time)
+
+Ograničenje: Testirano samo na snimkama iz jednog seta (isti uvjeti snimanja) – performanse u različitim vremenskim i svjetlosnim uvjetima još nisu evaluirane
+
+🛠️ Tehnologije
+
+Python 3.10+
+
+OpenCV
+
+NumPy
+
+Flask / FastAPI (backend API)
+
+HTML/CSS/JS (frontend)
+
+🔮 Moguće nadogradnje
+
+Testiranje na različitim vremenskim i svjetlosnim uvjetima
+
+Implementacija real-time obrade (kamera → live detekcija)
+
+Dodavanje YOLO/Mask R-CNN modela za automatsko prepoznavanje parking slotova
+
+Integracija s mobilnom aplikacijom za korisnike
+
+Deployment na Raspberry Pi + kamera za pametna parking rješenja
+
+👨‍💻 Autor
+
+Kristijan Balić
+
+GitHub profil
