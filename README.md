@@ -1,37 +1,35 @@
-# Parking Detection 🚗🅿️
+Samo izvoli. Uredio sam cijeli README.md fajl, uključujući promjene koje smo napravili u sekciji za instalaciju, i dodao nekoliko sitnih poboljšanja za bolju čitljivost i profesionalniji izgled.
 
-Automatski sustav za detekciju zauzetih i slobodnih parking mjesta pomoću računalnog vida.  
-Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni video s označenim slobodnim i zauzetim mjestima.
+Parking Detection 🚗🅿️
+Automatski sustav za detekciju zauzetih i slobodnih parking mjesta pomoću računalnog vida.
 
----
+Projekt koristi Python i OpenCV za obradu videa te generira izlazni video s označenim slobodnim i zauzetim mjestima.
 
-## 🚀 Značajke
+🚀 Značajke
+✅ Detekcija slobodnih i zauzetih parking mjesta
 
-- ✅ Detekcija slobodnih i zauzetih parking mjesta  
-- ✅ Vizualizacija pomoću **bounding boxova**  
-  - 🟢 zeleno = slobodno  
-  - 🔴 crveno = zauzeto  
-- ✅ Brojač slobodnih i zauzetih mjesta  
-- ✅ Generiranje renderiranog izlaznog videa koji se može preuzeti  
-- ✅ Modularna arhitektura (backend + frontend)  
-- ✅ 100% točnost na dostupnim testnim podacima  
+✅ Vizualizacija pomoću bounding boxova - 🟢 zeleno = slobodno
 
----
+🔴 crveno = zauzeto
 
-## 🖼️ Demo
+✅ Brojač slobodnih i zauzetih mjesta
 
-### Screenshot
-![Demo Screenshot](path/to/your/screenshot.png)
+✅ Generiranje renderiranog izlaznog videa koji se može preuzeti
 
-### Video
-[Demo Video](path/to/your/video.mp4)
+✅ Modularna arhitektura (backend + frontend)
 
-### Live verzija
-[Live Site](https://tvoj-live-link.com)
+✅ 100% točnost na dostupnim testnim podacima
 
----
+🖼️ Demo
+Screenshot
+Video
+Demo Video
 
-## 📂 Struktura projekta
+Live verzija
+Live Site
+
+📂 Struktura projekta
+YAML
 
 ParkingDetection/
 │── backend/
@@ -40,28 +38,22 @@ ParkingDetection/
 │── frontend/ # Web sučelje (upload videa i vizualizacija)
 │── data/ # Testne slike / video
 │── README.md # Dokumentacija
+⚙️ Instalacija i pokretanje
+Kloniraj repozitorij:
 
-yaml
-Kopiraj kod
+Bash
 
----
-
-## ⚙️ Instalacija i pokretanje
-
-1. Kloniraj repozitorij:
-
-bash
 git clone https://github.com/Kico611/ParkingDetection.git
 cd ParkingDetection
 Instaliraj potrebne pakete:
 
-bash
-Kopiraj kod
+Bash
+
 pip install -r requirements.txt
 Pokreni backend:
 
-bash
-Kopiraj kod
+Bash
+
 python backend/main.py
 Otvori frontend u pregledniku i uploadaj video za detekciju.
 
@@ -72,7 +64,7 @@ Način rada: Offline – korisnik šalje MP4 video, sustav ga obradi i generira 
 
 Latencija: Ovisi o duljini i rezoluciji videa (nije real-time)
 
-Ograničenje: Testirano samo na jednom setu snimki – performanse u različitim uvjetima još nisu evaluirane
+Ograničenje: Testirano samo na jednom setu snimki – performanse u različitim uvjetima još nisu evaluirane.
 
 🛠️ Tehnologije
 Python 3.10+
