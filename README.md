@@ -33,16 +33,12 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 
 ## 📂 Struktura projekta
 
-```
-ParkingDetection/
-├── backend/
-│ ├── model/ # Trening.py i model.pkl
-│ └── main.py # Glavni Python skript za pokretanje
-├── frontend/ # Web sučelje (upload videa i vizualizacija)
-├── venv/ # Virtualno okruženje (nije obavezno za GitHub)
-├── .gitignore
-└── README.md # Dokumentacija
-```
+- **backend/model/** – Sadrži sve što je vezano uz strojno učenje: trening skriptu i spremljeni model.  
+- **backend/main.py** – Pokreće cijeli backend sustav, uključujući učitavanje modela, obradu videa/slika i generiranje outputa.  
+- **frontend/** – React-based web aplikacija za prikaz rezultata detekcije, upload videa i vizualizaciju slobodnih/zauzetih mjesta.  
+- **venv/** – Virtualno okruženje s Python paketima, može se preskočiti na GitHubu.  
+- **.gitignore** – Definira koje datoteke i mape Git ignorira (npr. venv, temp files).  
+- **README.md** – Dokumentacija projekta s opisom, uputama za pokretanje i primjerima outputa.
 
 ---
 
@@ -79,18 +75,20 @@ Latencija: Ovisi o duljini i rezoluciji videa (nije real-time)
 Ograničenje: Testirano samo na jednom setu snimki – performanse u različitim uvjetima još nisu evaluirane
 
 ---
+
 ## 🛠️ Tehnologije
-Python 3.10+
-
-OpenCV
-
-NumPy
-
-FastAPI (backend API)
-
-HTML / CSS / JavaScript(React) (frontend)
+- **Python 3.10+** – Core programming language
+- 
+- **OpenCV** – Computer vision and image processing
+-  
+- **NumPy** – Numerical computations
+- 
+- **FastAPI** – Backend API for handling requests
+- 
+- **React (HTML / CSS / JavaScript)** – Frontend user interface
 
 ---
+
 ## 🔮 Moguće nadogradnje
 Testiranje u različitim vremenskim i svjetlosnim uvjetima
 
