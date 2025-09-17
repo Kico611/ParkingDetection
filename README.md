@@ -1,14 +1,16 @@
 # Parking Detection 🚗🅿️
 
 Automatski sustav za detekciju zauzetih i slobodnih parking mjesta pomoću računalnog vida.  
-Projekt koristi Python i OpenCV za obradu videa te generira izlazni video s označenim slobodnim i zauzetim mjestima.
+Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni video s označenim slobodnim i zauzetim mjestima.
 
 ---
 
 ## 🚀 Značajke
 
 - ✅ Detekcija slobodnih i zauzetih parking mjesta  
-- ✅ Vizualizacija pomoću bounding boxova (🟢 zeleno = slobodno, 🔴 crveno = zauzeto)  
+- ✅ Vizualizacija pomoću **bounding boxova**  
+  - 🟢 zeleno = slobodno  
+  - 🔴 crveno = zauzeto  
 - ✅ Brojač slobodnih i zauzetih mjesta  
 - ✅ Generiranje renderiranog izlaznog videa koji se može preuzeti  
 - ✅ Modularna arhitektura (backend + frontend)  
@@ -19,10 +21,10 @@ Projekt koristi Python i OpenCV za obradu videa te generira izlazni video s ozna
 ## 🖼️ Demo
 
 ### Screenshot
-![Demo Screenshot](path/to/your/screenshot.png)  
+![Demo Screenshot](path/to/your/screenshot.png)
 
 ### Video
-[Demo Video](path/to/your/video.mp4)  
+[Demo Video](path/to/your/video.mp4)
 
 ### Live verzija
 [Live Site](https://tvoj-live-link.com)
@@ -51,23 +53,17 @@ Kopiraj kod
 ```bash
 git clone https://github.com/Kico611/ParkingDetection.git
 cd ParkingDetection
-Kreiraj virtualno okruženje i instaliraj ovisnosti:
+Instaliraj potrebne pakete:
 
 bash
 Kopiraj kod
-python -m venv venv
-# Linux / Mac
-source venv/bin/activate
-# Windows
-venv\Scripts\activate
-
 pip install -r requirements.txt
 Pokreni backend:
 
 bash
 Kopiraj kod
 python backend/main.py
-Otvori frontend u pregledniku, učitaj video (.mp4) i preuzmi izlazni video s označenim parking mjestima.
+Otvori frontend u pregledniku i uploadaj video za detekciju.
 
 📊 Performanse
 Točnost: 100% na dostupnim testnim podacima
