@@ -60,32 +60,6 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 
 ---
 
-## ⚙️ Instalacija i pokretanje
-
-1. Kloniraj repozitorij
-```
-git clone https://github.com/Kico611/ParkingDetection.git
-cd ParkingDetection
-```
-2. Instaliraj potrebne pakete za backend
-```
-pip install -r requirements.txt
-```
-3. Pokreni FastAPI backend
-```
-uvicorn backend.main:app --reload
-Backend će biti dostupan na http://127.0.0.1:8000
-```
-4. Pokreni React frontend
-```
-cd frontend
-npm install
-npm run dev
-Frontend će biti dostupan na adresi koju terminal prikazuje (obično http://localhost:5173)
-```
-
----
-
 ## 📊 Performanse
 Točnost: 100% na dostupnim testnim podacima
 
