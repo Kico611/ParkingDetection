@@ -45,8 +45,10 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 
 ## ⚙️ Instalacija i pokretanje
 
-```
+---
 1. Kloniraj repozitorij
+---
+```
 git clone https://github.com/Kico611/ParkingDetection.git
 cd ParkingDetection
 ```
