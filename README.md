@@ -1,4 +1,4 @@
-9# Parking Detection 🚗🅿️
+## Parking Detection 🚗🅿️
 
 Automatski sustav za detekciju zauzetih i slobodnih parking mjesta pomoću računalnog vida.  
 Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni video s označenim slobodnim i zauzetim mjestima.
