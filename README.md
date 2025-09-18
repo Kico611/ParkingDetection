@@ -43,29 +43,43 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 
 ---
 
+## ☁️ Pohrana i cloud integracija
+
+- **Slike detekcija**: Renderirane slike i videozapisi s označenim parking mjestima spremaju se u **Supabase bucket**. Svaka slika dobiva jedinstveni link.  
+
+- **Status parkinga**:  
+  JSON zapis za svako mjesto sadrži:  
+  - ID mjesta  
+  - Status (`slobodno` / `zauzeto`)  
+  - Link na sliku u Supabase  
+
+  Podaci se pohranjuju u **Firebase**, što omogućuje frontend prikaz i analitiku zauzetosti u stvarnom vremenu.  
+
+- **Workflow**:  
+  1. Backend detektira slobodna/zauzeta mjesta.  
+  2. Renderira slike/video i upload na Supabase.  
+  3. Sprema status i link u Firebase za frontend.
+
+---
+
 ## ⚙️ Instalacija i pokretanje
 
 1. Kloniraj repozitorij
----
 ```
 git clone https://github.com/Kico611/ParkingDetection.git
 cd ParkingDetection
 ```
----
 2. Instaliraj potrebne pakete za backend
----
 ```
 pip install -r requirements.txt
 ```
-
-```
 3. Pokreni FastAPI backend
+```
 uvicorn backend.main:app --reload
 Backend će biti dostupan na http://127.0.0.1:8000
 ```
-
-```
 4. Pokreni React frontend
+```
 cd frontend
 npm install
 npm run dev
