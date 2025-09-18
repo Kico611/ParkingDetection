@@ -37,8 +37,7 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 - **backend/detect_parking.py** – Implementacija glavnih funkcija detekcije.
 - **backend/utils.py** – Pomoćne funkcije za obradu podataka i podršku glavnom algoritmu. 
 - **backend/main.py** – Pokreće cijeli backend sustav, uključujući učitavanje modela, obradu videa/slika i generiranje outputa.  
-- **frontend/** – React-based web aplikacija za prikaz rezultata detekcije, upload videa i vizualizaciju slobodnih/zauzetih mjesta.  
-- **venv/** – Virtualno okruženje s Python paketima, može se preskočiti na GitHubu.  
+- **frontend/** – React-based web aplikacija za prikaz rezultata detekcije, upload videa i vizualizaciju slobodnih/zauzetih mjesta.  .  
 - **.gitignore** – Definira koje datoteke i mape Git ignorira (npr. venv, temp files).  
 - **README.md** – Dokumentacija projekta s opisom, uputama za pokretanje i primjerima outputa.
 
@@ -46,24 +45,30 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 
 ## ⚙️ Instalacija i pokretanje
 
-1. Kloniraj repozitorij:
-
 ```
+1. Kloniraj repozitorij
 git clone https://github.com/Kico611/ParkingDetection.git
 cd ParkingDetection
 ```
 
-2.Instaliraj potrebne pakete:
-
 ```
+2. Instaliraj potrebne pakete za backend
 pip install -r requirements.txt
 ```
-3.Pokreni backend:
 
 ```
-python backend/main.py
+3. Pokreni FastAPI backend
+uvicorn backend.main:app --reload
+Backend će biti dostupan na http://127.0.0.1:8000
 ```
-4.Otvori frontend u pregledniku i uploadaj video za detekciju.
+
+```
+4. Pokreni React frontend
+cd frontend
+npm install
+npm run dev
+Frontend će biti dostupan na adresi koju terminal prikazuje (obično http://localhost:5173)
+```
 
 ---
 
