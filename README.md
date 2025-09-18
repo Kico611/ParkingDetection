@@ -48,17 +48,15 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 - **Slike detekcija**: Renderirane slike i videozapisi s označenim parking mjestima spremaju se u **Supabase bucket**. Svaka slika dobiva jedinstveni link.  
 
 - **Status parkinga**:  
-  JSON zapis za svako mjesto sadrži:  
-  - ID mjesta  
-  - Status (`slobodno` / `zauzeto`)  
-  - Link na sliku u Supabase  
+  JSON zapis sadrži:  
+  - `free_slots` – broj slobodnih mjesta  
+  - `occupied_slots` – broj zauzetih mjesta  
+  - `total_slots` – ukupni broj mjesta  
+  - `image_url` – link na sliku u Supabase  
+  - `timestamp` – vrijeme detekcije
+
 
   Podaci se pohranjuju u **Firebase**, što omogućuje frontend prikaz i analitiku zauzetosti u stvarnom vremenu.  
-
-- **Workflow**:  
-  1. Backend detektira slobodna/zauzeta mjesta.  
-  2. Renderira slike/video i upload na Supabase.  
-  3. Sprema status i link u Firebase za frontend.
 
 ---
 
