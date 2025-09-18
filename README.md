@@ -33,24 +33,23 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 
 ## 🏗️ Arhitektura sustava
 
-+----------------+       +-----------------------------+       +-----------------+
-| Video Input    |  -->  | Backend (Python + FastAPI)  |  -->  | Pohrana / Cloud |
-| (MP4 Upload)   |       | - OpenCV obrada             |       | - Firebase      |
-+----------------+       | - Detekcija zauzetih mjesta |       | - Supabase      |
-                         | - Generiranje JSON i video |       +-----------------+
-                         +-------------+---------------+
-                                       |
-                                       v
-                               +----------------+
-                               | Frontend (React)|
-                               | - Upload videa |
-                               | - Vizualizacija|
-                               | - Statistika   |
-                               +----------------+
+Video Input (MP4 Upload) / Slika  
+⬇️  
+Backend (Python + FastAPI)  
+- ML model i OpenCv obrada
+- Detekcija zauzetih mjesta  
+- Generiranje JSON & video  
+⬇️  
+Frontend (React)  
+- Upload videa  
+- Vizualizacija  
+- Statistika  
+⬇️  
+☁️ Pohrana / Cloud (Firebase / Supabase)
 
 **Opis tijeka podataka:**  
-1. Korisnik učitava MP4 video putem frontend sučelja.  
-2. Backend obrađuje video kroz ML model i OpenCV.  
+1. Korisnik učitava MP4 video/slika putem frontend sučelja.  
+2. Backend obrađuje video/sliku kroz ML model i OpenCV.  
 3. Sustav generira renderirani video i JSON zapis sa statusom parkinga.  
 4. JSON zapis se pohranjuje u Firebase, a slike/video u Supabase.  
 5. Frontend prikazuje rezultate s vizualnim oznakama i statistikom.
@@ -87,7 +86,7 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 ---
 
 ## 📊 Performanse
-Točnost: 100% na dostupnim testnim podacima
+Točnost: Visoka točnost na dostupnim testnim podacima
 
 Način rada: Offline – korisnik šalje MP4 video, sustav ga obradi i generira izlazni video
 
