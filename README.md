@@ -7,14 +7,14 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 
 ## 🚀 Značajke
 
-- ✅ Detekcija slobodnih i zauzetih parking mjesta  
-- ✅ Vizualizacija pomoću **bounding boxova**  
-  - 🟢 zeleno = slobodno  
-  - 🔴 crveno = zauzeto  
-- ✅ Brojač slobodnih i zauzetih mjesta  
-- ✅ Generiranje renderiranog izlaznog videa koji se može preuzeti  
-- ✅ Modularna arhitektura (backend + frontend)  
-- ✅ 100% točnost na dostupnim testnim podacima  
+- ✅ Automatska detekcija slobodnih i zauzetih parking mjesta  
+- ✅ Vizualizacija rezultata pomoću **bounding boxova**  
+  - 🟢 Zeleno = slobodno  
+  - 🔴 Crveno = zauzeto  
+- ✅ Brojač slobodnih i zauzetih mjesta u realnom vremenu  
+- ✅ Generiranje renderiranog izlaznog videa za preuzimanje  
+- ✅ Modularna arhitektura s odvojenim backend i frontend slojem  
+- ✅ Visoka točnost detekcije na dostupnom testnom skupu podataka
 
 ---
 
@@ -28,6 +28,32 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 
 ### Live verzija
 [Live Site](https://tvoj-live-link.com)
+
+---
+
+## 🏗️ Arhitektura sustava
+
++----------------+       +-----------------------------+       +-----------------+
+| Video Input    |  -->  | Backend (Python + FastAPI)  |  -->  | Pohrana / Cloud |
+| (MP4 Upload)   |       | - OpenCV obrada             |       | - Firebase      |
++----------------+       | - Detekcija zauzetih mjesta |       | - Supabase      |
+                         | - Generiranje JSON i video |       +-----------------+
+                         +-------------+---------------+
+                                       |
+                                       v
+                               +----------------+
+                               | Frontend (React)|
+                               | - Upload videa |
+                               | - Vizualizacija|
+                               | - Statistika   |
+                               +----------------+
+
+**Opis tijeka podataka:**  
+1. Korisnik učitava MP4 video putem frontend sučelja.  
+2. Backend obrađuje video kroz ML model i OpenCV.  
+3. Sustav generira renderirani video i JSON zapis sa statusom parkinga.  
+4. JSON zapis se pohranjuje u Firebase, a slike/video u Supabase.  
+5. Frontend prikazuje rezultate s vizualnim oznakama i statistikom.
 
 ---
 
