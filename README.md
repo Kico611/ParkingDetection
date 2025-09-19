@@ -31,6 +31,37 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 
 ---
 
+## ⚙️ Metode i algoritam
+
+Detekcija zauzetosti parking mjesta kombinira računalni vid i strojno učenje:
+
+1. **Definicija parking mjesta (ROI)**  
+   - Parking mjesta su definirana maskom (`mask_1920_1080.png`).  
+   - Koristi se `cv2.connectedComponentsWithStats` za automatsko izvlačenje bounding boxova svakog parking mjesta.
+
+2. **ML model za klasifikaciju**  
+   - Svako mjesto se cropa i resize-a na 15×15×3.  
+   - Flatten-ana slika se prosljeđuje spremljenom modelu (`model.p`) koji predviđa status:  
+     - `EMPTY` → slobodno  
+     - `NOT_EMPTY` → zauzeto  
+
+3. **Video heuristika i optimizacija**  
+   - Za video detekciju ne provjeravaju se sva mjesta u svakom frameu.  
+   - Koristi se funkcija `calc_diff` koja mjeri promjenu između trenutnog i prethodnog framea za svako mjesto.  
+   - Samo mjesta s dovoljno velikom promjenom se ponovno klasificiraju, što značajno smanjuje računsku kompleksnost.
+
+4. **Vizualizacija i output**  
+   - Slobodna mjesta označena zelenim, zauzeta crvenim bounding boxovima.  
+   - Overlay s brojem slobodnih, zauzetih i ukupnih mjesta.  
+   - Generira se renderirani video i JSON zapis sa statusom parkinga za backend/frontend integraciju.
+
+⚠️ **Ograničenja trenutne metode:**  
+- Osjetljivost na sjene i promjene svjetla.  
+- Radi samo s fiksnim kamerama (ROI unaprijed definirani).  
+- Heuristika za video detekciju može propustiti brze promjene između frameova.
+
+---
+
 ## 🏗️ Arhitektura sustava
 
 Video Input (MP4 Upload) / Slika  
