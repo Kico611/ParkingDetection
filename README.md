@@ -1,4 +1,4 @@
-## Parking Detection 🚗🅿️
+## 🚗🅿️ Parking Detection
 
 Automatski sustav za detekciju zauzetih i slobodnih parking mjesta pomoću računalnog vida.  
 Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni video s označenim slobodnim i zauzetim mjestima.
@@ -39,11 +39,18 @@ Detekcija zauzetosti parking mjesta kombinira računalni vid i strojno učenje:
    - Parking mjesta su definirana maskom (`mask_1920_1080.png`).  
    - Koristi se `cv2.connectedComponentsWithStats` za automatsko izvlačenje bounding boxova svakog parking mjesta.
 
-2. **ML model za klasifikaciju**  
-   - Svako mjesto se cropa i resize-a na 15×15×3.  
-   - Flatten-ana slika se prosljeđuje spremljenom modelu (`model.p`) koji predviđa status:  
-     - `EMPTY` → slobodno  
-     - `NOT_EMPTY` → zauzeto  
+2. **ML model za klasifikaciju**
+   - Skup podataka se sastoji od slika parking mjesta podijeljenih u dvije kategorije: empty (slobodno) i not_empty (zauzeto).
+
+   - Svaka slika se resize-a na 15×15×3 piksela i flatten-a u vektor.
+
+   - Podaci se dijele u 80% trening i 20% test uz stratifikaciju klasa.
+
+   - Koristi se Support Vector Machine s optimizacijom parametara (C i gamma) pomoću GridSearchCV.
+
+   - Najbolji model se evaluira na testnom skupu (accuracy_score) i sprema u model.p za kasniju upotrebu.
+
+   - Primjer rezultata: 100% točnosti na testnom skupu (ovisno o datasetu, stvarna točnost može varirati).
 
 3. **Video heuristika i optimizacija**  
    - Za video detekciju ne provjeravaju se sva mjesta u svakom frameu.  
