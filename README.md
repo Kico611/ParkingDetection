@@ -27,8 +27,7 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 ![Demo GIF](backend/rendered_videos/Demo2.gif)
 
 ## Video Walkthrough
-[![Demo Walkthrough](https://link-do-slike-thumbnail.jpg)](https://drive.google.com/file/d/TVOJ_FILE_ID/view?usp=sharing)
-
+[![Demo Walkthrough](backend/rendered_videos/thumbnail.png)](https://www.youtube.com/watch?v=gPWW_mER1D4)
 
 ---
 
