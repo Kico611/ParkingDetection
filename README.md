@@ -18,7 +18,7 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 
 ---
 
-## 👀 See It in Action: GIF + Video
+## 🖼️ Demo
 
 ### Screenshot
 ![Demo Screenshot](backend/rendered_videos/Picture1.jpg)
@@ -26,7 +26,7 @@ Projekt koristi **Python** i **OpenCV** za obradu videa te generira izlazni vide
 ### GIF
 ![Demo GIF](backend/rendered_videos/Demo2.gif)
 
-## Video Walkthrough
+## Video Walkthrough(Click on image!)
 [![Demo Walkthrough](backend/rendered_videos/thumbnail.png)](https://www.youtube.com/watch?v=gPWW_mER1D4)
 
 ---
